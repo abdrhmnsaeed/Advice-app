@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 
 function App() {
-  const [advice, setAdvice] = useState("");
+  const [advice, setAdvice] = useState("")
   const [count, setCount] = useState(0)
 
   async function getAdvice() {
-    const response = await fetch("https://api.adviceslip.com/advice");
+    const response = await fetch("https://api.adviceslip.com/advice")
     const data = await response.json();
     console.log(data.slip.advice);
     setAdvice(data.slip.advice);
@@ -32,4 +32,4 @@ function Message (props){
   )
 }
 
-export default App;
+export default App
